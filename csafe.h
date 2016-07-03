@@ -275,8 +275,6 @@ typedef struct csafe_data_st {
     unsigned int horizontal;            /* CSAFE_GETHORIZONTAL_CMD */
     unsigned int horizontal_units;
 
-    unsigned int seconds_per_km;        /* CSAFE_GETPACE_CMD */
-    unsigned int watts;                 /* CSAFE_GETPOWER_CMD */
     unsigned int calories;              /* CSAFE_GETCALORIES_CMD */
     unsigned int program;               /* CSAFE_GETPROGRAM_CMD */
 
@@ -328,7 +326,7 @@ typedef struct csafe_data_st {
     unsigned int error_value;           /* CSAFE_PM_GET_ERRORVALUE */
 
     unsigned int force_plot_data[MAX_FORCEPLOTDATA_BYTES/2]; /* CSAFE_PM_GET_FORCEPLOTDATA */
-    unsigned int short heart_beat_data[MAX_HEARTBEATDATA_BYTES/2];  /* CSAFE_PM_GET_HEARTBEATDATA */
+    unsigned int heart_beat_data[MAX_HEARTBEATDATA_BYTES/2];  /* CSAFE_PM_GET_HEARTBEATDATA */
     unsigned char workout_state;        /* WORKOUT_STATE; CSAFE_PM_GET_WORKOUTSTATE */
     unsigned int  rest_time;            /* CSAFE_PM_GET_RESTTIME */
     unsigned char interval_type;        /* CSAFE_PM_GET_INTERVALTYPE */

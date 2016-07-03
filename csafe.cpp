@@ -633,7 +633,7 @@ static int csafe_setcalories_resp(csafe_buffer_t *b, csafe_data_t *o) {
 static int csafe_setprogram_req(csafe_buffer_t *b, csafe_data_t *o) {
     BUFF_TX_INIT(CSAFE_SETPROGRAM_CMD_HEX);
     BUFF_TX_APPEND_BYTE(2);
-    BUFF_TX_APPEND_VAL(o->program, 2);
+    BUFF_TX_APPEND_VAL(o->setprogram, 2);
     BUFF_TX_END();
 }
 static int csafe_setprogram_resp(csafe_buffer_t *b, csafe_data_t *o) {

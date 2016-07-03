@@ -189,14 +189,14 @@ void dump_monitor(csafe_data_t *o) {
     printf("Horizontal distance: %d (units 0x%02x)\n",
             o->horizontal, o->horizontal_units);
 
-    dhms(o->seconds_per_km, &d, &h, &m, &s);
+    dhms(o->pace, &d, &h, &m, &s);
     printf("Pace: %dsecs/km %d:%02d:%02d:%02d/km\n",
-            o->seconds_per_km, d, h, m, s);
+            o->pace, d, h, m, s);
 
-    dhms(o->seconds_per_km / 2, &d, &h, &m, &s);
+    dhms(o->pace / 2, &d, &h, &m, &s);
     printf("Pace: %d:%02d:%02d:%02d/500m\n", d, h, m, s);
 
-    printf("Watts: %dW\n", o->watts);
+    printf("Watts: %dW\n", o->power);
     printf("Calories: %dcal\n", o->calories);
     printf("Stroke rate: %d strokes (units 0x%02x)\n",
             o->cadence, o->cadence_units);
